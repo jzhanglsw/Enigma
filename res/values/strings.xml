@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">enigma</string>
+    <string name="action_settings">Settings</string>
+    <string name="desc">Brain Puzzle</string>
+    <string name="play">Play</string>
+    <string name="instruct">Instructions</string>
+    <string name="about">About</string>
+    <string name="options">Options</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="aboutcontent">This is the about page for the enigma app. The creator of this app is Jack Zhang. </string>
+    <string name="title_activity_instruction">InstructionActivity</string>
+    <string name="aboutinstructions">How to play Enigma: \n 1. Each puzzle has three clues \n 2. The three clues are all related to one word \n 3. Clues include idioms, adjectives, and sections of the word \n 4. Have fun!</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="title_activity_play_activity2">PlayActivity2</string>
+    <string name="title_activity_puzzle">PuzzleActivity</string>
+    <string name="cluefiller">Clue</string>
+    <string name="answerhint">Answer</string>
+    <string name="title_activity_play_menu">PlayMenuActivity</string>
+
+</resources>

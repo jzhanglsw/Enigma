@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mybackground"    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:gravity="center"    
+    tools:context="com.ralphietheman.enigma.LobbyActivity" >
+
+    <ImageView
+        android:id="@+id/lobbypic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/desc"        
+        android:src="@drawable/maze" />    
+    
+    <Button
+        android:id="@+id/playbutton"        
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/play"
+        android:onClick="showPlayPage"
+		android:background="@drawable/menubutton"         
+        />	
+    <Button
+		android:id="@+id/instructbutton"        
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/instruct" 
+        android:onClick="showInstructionsPage"
+		android:background="@drawable/menubutton"                  
+        />	
+    <Button
+        android:id="@+id/aboutbutton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/about" 
+        android:onClick="showAboutPage"
+		android:background="@drawable/menubutton"                 
+        />  
+    <Button
+        android:id="@+id/optionsbutton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/options" 
+        android:onClick="showOptionsPage"
+		android:background="@drawable/menubutton"                         
+        />
+
+</LinearLayout>
