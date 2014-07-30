@@ -14,7 +14,6 @@
     <string name="title_activity_instruction">InstructionActivity</string>
     <string name="aboutinstructions">How to play Enigma: \n 1. Each puzzle has three clues \n 2. The three clues are all related to one word \n 3. Clues include idioms, adjectives, and sections of the word \n 4. Have fun!</string>
     <string name="title_activity_play">PlayActivity</string>
-    <string name="title_activity_play_activity2">PlayActivity2</string>
     <string name="title_activity_puzzle">PuzzleActivity</string>
     <string name="cluefiller">Clue</string>
     <string name="answerhint">Answer</string>

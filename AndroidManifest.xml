@@ -26,6 +26,10 @@
             android:name=".PlayMenuActivity"
             android:label="@string/title_activity_play_menu" >
         </activity>
+        <activity
+            android:name="com.example.enigma.PlayMenuActivity"
+            android:label="@string/title_activity_puzzle" >
+        </activity>        
     </application>
 
 </manifest>
