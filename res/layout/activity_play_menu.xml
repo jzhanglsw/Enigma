@@ -1,8 +1,8 @@
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/mybackground"  
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center"    
-    tools:context="com.ralphietheman.enigma.PlayMenuActivity" >
-</ListView>
+    tools:context="com.ralphietheman.enigma.PlayMenuActivity" >    
+</RelativeLayout>

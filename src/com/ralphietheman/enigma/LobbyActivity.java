@@ -1,6 +1,7 @@
 package com.ralphietheman.enigma;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -29,8 +30,6 @@ public class LobbyActivity extends Activity {
 	    buttonSoundID = soundPool.load(this, R.raw.button, 1);		
 	    welcomeSoundID = soundPool.load(this, R.raw.welcome, 1);
 	    
-	    // Hides the title bar
-	    //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_lobby);
     }
 
@@ -99,7 +98,7 @@ public class LobbyActivity extends Activity {
 	public void showPlayPage(View view) {
 		playSoundID(buttonSoundID);
 	    // Do something in response to button
-		//Intent intent = new Intent(this, PlayActivity.class);
-		//startActivity(intent);
+		Intent intent = new Intent(this, PlayMenuActivity.class);
+		startActivity(intent);
 	}	
 }

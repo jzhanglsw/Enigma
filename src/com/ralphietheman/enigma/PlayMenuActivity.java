@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -30,13 +31,19 @@ public class PlayMenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		LinearLayout linear = new LinearLayout(this);
+		linear.setOrientation(0);
+		linear.setBackgroundColor(Color.rgb(112, 112, 118));
+		linear.setGravity(Gravity.LEFT);
+		
 		//Code for creating layout is outdated
+		/*
         TableLayout layout = new TableLayout (this);
         layout.setLayoutParams( new TableLayout.LayoutParams(4,5) );
 
         layout.setBackgroundColor(Color.rgb(112, 112, 118));
         layout.setGravity(Gravity.CENTER);
-		
+		*/
 		fillClueTypes();
 		
 		 puzzles = null;
@@ -68,18 +75,17 @@ public class PlayMenuActivity extends Activity {
 	                    //Not sure what changed about this line
 	                    //b.setOnClickListener(this);  
 	                    b.setId(puzzlenum);
-	                    tr.addView(b, 80,80);            		
-	            	}
+	                    tr.addView(b, 80,80);
+	                   	}
 	            	else
 	            	{
 	            		break;
 	            	}
 	                puzzlenum++;
 	            }
-	            layout.addView(tr);
 	        }
 		
-		setContentView(R.layout.activity_play_menu);
+		setContentView(linear);
 	}
 
 	// Processes number tags in the feed.
