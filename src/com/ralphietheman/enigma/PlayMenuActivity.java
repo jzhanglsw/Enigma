@@ -11,6 +11,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Xml;
@@ -42,15 +43,6 @@ public class PlayMenuActivity extends Activity {
 		linear.setOrientation(1);
 		linear.setBackgroundColor(Color.rgb(112, 112, 118));
 		
-		//Code for creating layout is outdated
-		/*
-        TableLayout layout = new TableLayout (this);
-        layout.setLayoutParams( new TableLayout.LayoutParams(4,5) );
-
-        layout.setBackgroundColor(Color.rgb(112, 112, 118));
-        layout.setGravity(Gravity.CENTER);
-		*/
-		
 		fillClueTypes();
 		
 		 puzzles = null;
@@ -80,6 +72,10 @@ public class PlayMenuActivity extends Activity {
                     b.setText("Puzzle "+puzzlenum);
                     b.setTextSize(textsize);
                     b.setTextColor(Color.rgb( 255, 255, 255));
+                    Drawable d = getResources().getDrawable(R.drawable.menubutton);
+                    b.setBackground(d);
+                    setButtonMargins(b);
+                    
                     //Not sure what changed about this line
                     b.setOnClickListener(new OnClickListener(){
                     	public void onClick(View v){
@@ -113,6 +109,15 @@ public class PlayMenuActivity extends Activity {
 	        
 	    scroll.addView(linear);
 		setContentView(scroll);
+	}
+	
+	private void setButtonMargins(Button b){
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+        		LinearLayout.LayoutParams.MATCH_PARENT,      
+        		LinearLayout.LayoutParams.MATCH_PARENT
+        );
+        params.setMargins(15, 5, 15, 5);
+        b.setLayoutParams(params);
 	}
 
 	// Processes number tags in the feed.
