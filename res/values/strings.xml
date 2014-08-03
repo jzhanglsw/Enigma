@@ -18,5 +18,6 @@
     <string name="cluefiller">Clue</string>
     <string name="answerhint">Answer</string>
     <string name="title_activity_play_menu">PlayMenuActivity</string>
+    <string name="title_activity_puzzle_activity_old">PuzzleActivityOld</string>
 
 </resources>

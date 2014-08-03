@@ -29,7 +29,7 @@ public class LobbyActivity extends Activity {
 	    soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
 	    buttonSoundID = soundPool.load(this, R.raw.button, 1);		
 	    welcomeSoundID = soundPool.load(this, R.raw.welcome, 1);
-	    
+	    playSoundID(welcomeSoundID);
 		setContentView(R.layout.activity_lobby);
     }
 
@@ -53,7 +53,6 @@ public class LobbyActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-	    playSoundID(welcomeSoundID);
         getMenuInflater().inflate(R.menu.lobby, menu);
         return true;
     }

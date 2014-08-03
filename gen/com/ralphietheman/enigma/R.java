@@ -32,7 +32,11 @@ public final class R {
     }
     public static final class id {
         public static final int aboutbutton=0x7f0a0003;
-        public static final int action_settings=0x7f0a0005;
+        public static final int action_settings=0x7f0a0009;
+        public static final int answer=0x7f0a0008;
+        public static final int clue1=0x7f0a0005;
+        public static final int clue2=0x7f0a0006;
+        public static final int clue3=0x7f0a0007;
         public static final int instructbutton=0x7f0a0002;
         public static final int lobbypic=0x7f0a0000;
         public static final int optionsbutton=0x7f0a0004;
@@ -41,10 +45,12 @@ public final class R {
     public static final class layout {
         public static final int activity_lobby=0x7f030000;
         public static final int activity_play_menu=0x7f030001;
+        public static final int activity_puzzle_activity_old=0x7f030002;
     }
     public static final class menu {
         public static final int lobby=0x7f090000;
         public static final int play_menu=0x7f090001;
+        public static final int puzzle_activity_old=0x7f090002;
     }
     public static final class raw {
         public static final int button=0x7f040000;
@@ -70,6 +76,7 @@ public final class R {
         public static final int title_activity_play=0x7f07000c;
         public static final int title_activity_play_menu=0x7f070010;
         public static final int title_activity_puzzle=0x7f07000d;
+        public static final int title_activity_puzzle_activity_old=0x7f070011;
     }
     public static final class style {
         /** 

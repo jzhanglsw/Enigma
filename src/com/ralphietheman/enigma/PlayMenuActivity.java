@@ -9,16 +9,21 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Xml;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -31,10 +36,11 @@ public class PlayMenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		ScrollView scroll = new ScrollView(this);
+		
 		LinearLayout linear = new LinearLayout(this);
-		linear.setOrientation(0);
+		linear.setOrientation(1);
 		linear.setBackgroundColor(Color.rgb(112, 112, 118));
-		linear.setGravity(Gravity.LEFT);
 		
 		//Code for creating layout is outdated
 		/*
@@ -44,48 +50,69 @@ public class PlayMenuActivity extends Activity {
         layout.setBackgroundColor(Color.rgb(112, 112, 118));
         layout.setGravity(Gravity.CENTER);
 		*/
+		
 		fillClueTypes();
 		
 		 puzzles = null;
-			try 
-			{
-				puzzles = parse(getAssets().open(puzzlepack1));
-				Log.e("debug","Debug: Size of puzzles is: " + puzzles.size());			
-			}
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			} 
-			catch (XmlPullParserException e) 
-			{
-				e.printStackTrace();
-			}
+		try 
+		{
+			puzzles = parse(getAssets().open(puzzlepack1));
+			Log.e("debug","Debug: Size of puzzles is: " + puzzles.size());			
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (XmlPullParserException e) 
+		{
+			e.printStackTrace();
+		}
+        
+        int puzzlenum = 1;
+        int textsize = 70;
+        
+        for (int f=0; f<=7; f++) {
+            TableRow tr = new TableRow(this);
+            for (int c=0; c<=5; c++) {
+            	if(puzzlenum<=puzzles.size())
+            	{
+                    Button b = new Button (this);
+                    b.setText("Puzzle "+puzzlenum);
+                    b.setTextSize(textsize);
+                    b.setTextColor(Color.rgb( 255, 255, 255));
+                    //Not sure what changed about this line
+                    b.setOnClickListener(new OnClickListener(){
+                    	public void onClick(View v){
+                    		// TODO Auto-generated method stub
+                            //To do: Extract information about which button is being clicked
+                            //To do: Create an intent and pass on the extra information along the
+                            //appropriate puzzle to the PuzzleActivity
+                    		
+                    		//Not yet implemented
+                    		Intent intent = new Intent(PlayMenuActivity.this, PuzzleActivityOld.class);
+                    		if(puzzles != null)
+                    		{
+                    			int puzzlenum = v.getId();
+                    			Puzzle move = puzzles.get(puzzlenum-1);
+                    			intent.putExtra("answer", move.myAnswer);
+                    			intent.putExtra("clues", move.myClues);			
+                    		}
+                    		startActivity(intent);
+                    	}
+                    });  
+                    b.setId(puzzlenum);
+                    linear.addView(b, puzzlenum - 1);
+                   	}
+            	else
+            	{
+            		break;
+            	}
+                puzzlenum++;
+            }
+        }
 	        
-	        int puzzlenum = 1;
-	        int textsize = 20;
-	        for (int f=0; f<=7; f++) {
-	            TableRow tr = new TableRow(this);
-	            for (int c=0; c<=5; c++) {
-	            	if(puzzlenum<=puzzles.size())
-	            	{
-	                    Button b = new Button (this);
-	                    b.setText(""+puzzlenum);
-	                    b.setTextSize(textsize);
-	                    b.setTextColor(Color.rgb( 255, 255, 255));
-	                    //Not sure what changed about this line
-	                    //b.setOnClickListener(this);  
-	                    b.setId(puzzlenum);
-	                    tr.addView(b, 80,80);
-	                   	}
-	            	else
-	            	{
-	            		break;
-	            	}
-	                puzzlenum++;
-	            }
-	        }
-		
-		setContentView(linear);
+	    scroll.addView(linear);
+		setContentView(scroll);
 	}
 
 	// Processes number tags in the feed.
@@ -124,24 +151,6 @@ public class PlayMenuActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.play_menu, menu);
 		return true;
-	}
-	
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-        //To do: Extract information about which button is being clicked
-        //To do: Create an intent and pass on the extra information along the
-        //appropriate puzzle to the PuzzleActivity
-		
-		//Not yet implemented
-		//Intent intent = new Intent(this, PuzzleActivity.class);
-		if(puzzles != null)
-		{
-			int puzzlenum = v.getId();
-			Puzzle move = puzzles.get(puzzlenum-1);
-			//intent.putExtra("answer", move.myAnswer);
-			//intent.putExtra("clues", move.myClues);			
-		}
-		//startActivity(intent);
 	}
 	
 	public ArrayList<Puzzle> parse(InputStream in) throws XmlPullParserException, IOException {

@@ -29,7 +29,11 @@
         <activity
             android:name="com.example.enigma.PlayMenuActivity"
             android:label="@string/title_activity_puzzle" >
-        </activity>        
+        </activity>
+        <activity
+            android:name=".PuzzleActivityOld"
+            android:label="@string/title_activity_puzzle_activity_old" >
+        </activity>
     </application>
 
 </manifest>
