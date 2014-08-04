@@ -60,8 +60,11 @@ public class PlayMenuActivity extends Activity {
 			e.printStackTrace();
 		}
         
+		
+		// Configurations of menu
         int puzzlenum = 1;
         int textsize = 70;
+        int gray = Color.rgb( 255, 255, 255);
         
         for (int f=0; f<=7; f++) {
             TableRow tr = new TableRow(this);
@@ -71,7 +74,7 @@ public class PlayMenuActivity extends Activity {
                     Button b = new Button (this);
                     b.setText("Puzzle "+puzzlenum);
                     b.setTextSize(textsize);
-                    b.setTextColor(Color.rgb( 255, 255, 255));
+                    b.setTextColor(gray);
                     Drawable d = getResources().getDrawable(R.drawable.menubutton);
                     b.setBackground(d);
                     setButtonMargins(b);

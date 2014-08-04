@@ -7,38 +7,41 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:gravity="center"
+    android:gravity="center_vertical"
     tools:context=".PuzzleActivity" >
     <Button
         android:id="@+id/clue1"        
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
+        android:layout_margin="10dp"
         android:text="@string/cluefiller"
+        android:textSize="40sp"        
         />	
     <Button
         android:id="@+id/clue2"        
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
+        android:layout_margin="10dp"
         android:text="@string/cluefiller"
+        android:textSize="40sp"
         />	
     <Button
         android:id="@+id/clue3"        
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
+        android:layout_margin="10dp"
         android:text="@string/cluefiller"
+        android:textSize="40sp"
         />	
 	<EditText
 	    android:id="@+id/answer"
-	    android:layout_width="150dp"
+	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_margin="6dp"
+	    android:layout_margin="10dp"
 	    android:hint="@string/answerhint"
 	    android:inputType="textCapWords" 
 	    android:imeOptions="actionSend"
 	    android:onClick="checkAnswer"
+	    android:textSize="40sp"
 	    />                        
 </LinearLayout>
