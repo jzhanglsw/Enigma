@@ -81,8 +81,8 @@ public class LobbyActivity extends Activity {
 	public void showOptionsPage(View view) {
 		playSoundID(buttonSoundID);
 	    // Do something in response to button
-		//Intent intent = new Intent(this, OptionsActivity.class);
-		//startActivity(intent);
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
 	}
 	
 	/** Called when the user clicks the instructions button */

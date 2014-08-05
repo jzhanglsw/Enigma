@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -33,7 +32,6 @@ public class PuzzleActivityOld extends Activity {
 	    // Load the sound
 	    soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
 	    winSoundID = soundPool.load(this, R.raw.win, 1);
-	    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 		updateButtonText();	
 	}
 
