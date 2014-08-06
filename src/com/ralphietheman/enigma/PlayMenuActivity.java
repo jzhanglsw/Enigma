@@ -15,18 +15,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Xml;
-import android.view.Display;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 
 public class PlayMenuActivity extends Activity {
 	public static final String puzzlepack1 = "puzzles1.xml";
@@ -45,7 +40,7 @@ public class PlayMenuActivity extends Activity {
 		
 		fillClueTypes();
 		
-		 puzzles = null;
+		puzzles = null;
 		try 
 		{
 			puzzles = parse(getAssets().open(puzzlepack1));
@@ -67,7 +62,6 @@ public class PlayMenuActivity extends Activity {
         int gray = Color.rgb( 255, 255, 255);
         
         for (int f=0; f<=7; f++) {
-            TableRow tr = new TableRow(this);
             for (int c=0; c<=5; c++) {
             	if(puzzlenum<=puzzles.size())
             	{

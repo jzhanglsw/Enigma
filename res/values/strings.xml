@@ -19,11 +19,12 @@
     <string name="answerhint">Answer</string>
     <string name="title_activity_play_menu">PlayMenuActivity</string>
     <string name="title_activity_puzzle_activity_old">PuzzleActivityOld</string>
-    
     <string name="settings_title">Settings</string>
     <string name="sound_title">Sound</string>
-    <string name="gameplay_title">Gameplay</string>    
+    <string name="gameplay_title">Gameplay</string>
     <string name="welcome_title">Play welcome music</string>
-	<string name="preferences_title">Enigma Settings</string>
-	<string name="display_hints">Toggle Hints</string>
+    <string name="preferences_title">Enigma Settings</string>
+    <string name="display_hints">Toggle Hints</string>
+    <string name="title_activity_puzzle_select">PuzzleSelectActivity</string>
+
 </resources>

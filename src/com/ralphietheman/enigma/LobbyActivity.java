@@ -2,9 +2,11 @@ package com.ralphietheman.enigma;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +31,13 @@ public class LobbyActivity extends Activity {
 	    soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
 	    buttonSoundID = soundPool.load(this, R.raw.button, 1);		
 	    welcomeSoundID = soundPool.load(this, R.raw.welcome, 1);
-	    playSoundID(welcomeSoundID);
+	    
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		Boolean playWelcome = preferences.getBoolean("welcome_preference", true);
+	    
+		if(playWelcome){
+			playSoundID(welcomeSoundID);
+		}
 		setContentView(R.layout.activity_lobby);
     }
 
@@ -97,7 +105,8 @@ public class LobbyActivity extends Activity {
 	public void showPlayPage(View view) {
 		playSoundID(buttonSoundID);
 	    // Do something in response to button
-		Intent intent = new Intent(this, PlayMenuActivity.class);
+		//Intent intent = new Intent(this, PlayMenuActivity.class);
+		Intent intent = new Intent(this, PuzzleSelectActivity.class);
 		startActivity(intent);
 	}	
 }

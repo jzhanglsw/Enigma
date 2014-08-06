@@ -3,12 +3,16 @@ package com.ralphietheman.enigma;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,43 +66,55 @@ public class PuzzleActivityOld extends Activity {
 		buttonlist.add(clue1);
 		buttonlist.add(clue2);
 		buttonlist.add(clue3);
+        Drawable d = getResources().getDrawable(R.drawable.menubutton);
+        clue1.setBackground(d);
+        clue2.setBackground(d);
+        clue3.setBackground(d);
 		Intent puzzleinfo = getIntent();
 		@SuppressWarnings("unchecked")
 		HashMap<String, String> clues = (HashMap<String, String>) puzzleinfo.getSerializableExtra("clues");
 		int index = 0;
+		
+		//Gets the settings value for whether to display hints to the user
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		Boolean displayHints = preferences.getBoolean("display_hints_preference", true);
+
 		for(String clue: clues.keySet())
 		{
 			Button buttonclue = buttonlist.get(index);
-			buttonclue.setOnClickListener(new OnClickListener(){
-				public void onClick(View v){
-					Intent puzzleinfo = getIntent();		
-					@SuppressWarnings("unchecked")
-					HashMap<String, String> clues = (HashMap<String, String>) puzzleinfo.getSerializableExtra("clues");
-					String buttontext = ((Button) v).getText().toString();
-					Button change = (Button) v;
-					// If the button currently has the clue itself
-					if(clues.keySet().contains(buttontext))
-					{
-						change.setText(clues.get(buttontext));
-					}
-					// If the button currently has what type of clue it is
-					else if(clues.values().contains(buttontext))
-					{
-						for(String key: clues.keySet())
+			if(displayHints){
+				buttonclue.setOnClickListener(new OnClickListener(){
+					public void onClick(View v){
+						Intent puzzleinfo = getIntent();		
+						@SuppressWarnings("unchecked")
+						HashMap<String, String> clues = (HashMap<String, String>) puzzleinfo.getSerializableExtra("clues");
+						String buttontext = ((Button) v).getText().toString();
+						Button change = (Button) v;
+						// If the button currently has the clue itself
+						if(clues.keySet().contains(buttontext))
 						{
-							if(clues.get(key).equals(buttontext))
+							change.setText(clues.get(buttontext));
+						}
+						// If the button currently has what type of clue it is
+						else if(clues.values().contains(buttontext))
+						{
+							for(String key: clues.keySet())
 							{
-								change.setText(key);
+								if(clues.get(key).equals(buttontext))
+								{
+									change.setText(key);
+								}
 							}
 						}
 					}
-				}
-			});
+				});
+			}
 			buttonclue.setText(clue);
 			index++;
 		}
 	}
 	
+	@SuppressLint("DefaultLocale")
 	public void checkAnswer(View view)
 	{
 		Intent intent = getIntent();

@@ -38,6 +38,10 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name=".PuzzleSelectActivity"
+            android:label="@string/title_activity_puzzle_select" >
+        </activity>
     </application>
 
 </manifest>
