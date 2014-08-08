@@ -56,8 +56,6 @@ public class PuzzleSelectActivity extends Activity {
                     //To do: Extract information about which button is being clicked
                     //To do: Create an intent and pass on the extra information along the
                     //appropriate puzzle to the PuzzleActivity
-            		
-            		//Not yet implemented
             		Intent intent = new Intent(PuzzleSelectActivity.this, PlayMenuActivity.class);
             		startActivity(intent);
             	}

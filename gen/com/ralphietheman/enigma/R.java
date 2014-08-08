@@ -31,18 +31,21 @@ public final class R {
         public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int maze=0x7f020001;
-        public static final int maze2=0x7f020002;
-        public static final int menubutton=0x7f020003;
+        public static final int greenmenubutton=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int maze=0x7f020002;
+        public static final int maze2=0x7f020003;
+        public static final int menubutton=0x7f020004;
     }
     public static final class id {
         public static final int aboutbutton=0x7f0c0003;
-        public static final int action_settings=0x7f0c0009;
-        public static final int answer=0x7f0c0008;
+        public static final int action_settings=0x7f0c000b;
+        public static final int answer=0x7f0c000a;
         public static final int clue1=0x7f0c0005;
         public static final int clue2=0x7f0c0006;
         public static final int clue3=0x7f0c0007;
+        public static final int clue4=0x7f0c0008;
+        public static final int clue5=0x7f0c0009;
         public static final int instructbutton=0x7f0c0002;
         public static final int lobbypic=0x7f0c0000;
         public static final int optionsbutton=0x7f0c0004;
@@ -51,14 +54,17 @@ public final class R {
     public static final class layout {
         public static final int activity_lobby=0x7f030000;
         public static final int activity_play_menu=0x7f030001;
-        public static final int activity_puzzle_activity_old=0x7f030002;
-        public static final int activity_puzzle_select=0x7f030003;
+        public static final int activity_puzzle=0x7f030002;
+        public static final int activity_puzzle_activity=0x7f030003;
+        public static final int activity_puzzle_activity_old=0x7f030004;
+        public static final int activity_puzzle_select=0x7f030005;
     }
     public static final class menu {
         public static final int lobby=0x7f0b0000;
         public static final int play_menu=0x7f0b0001;
-        public static final int puzzle_activity_old=0x7f0b0002;
-        public static final int puzzle_select=0x7f0b0003;
+        public static final int puzzle=0x7f0b0002;
+        public static final int puzzle_activity_old=0x7f0b0003;
+        public static final int puzzle_select=0x7f0b0004;
     }
     public static final class raw {
         public static final int button=0x7f050000;

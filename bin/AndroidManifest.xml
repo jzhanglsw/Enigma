@@ -42,6 +42,10 @@
             android:name=".PuzzleSelectActivity"
             android:label="@string/title_activity_puzzle_select" >
         </activity>
+        <activity
+            android:name=".PuzzleActivity"
+            android:label="@string/title_activity_puzzle" >
+        </activity>
     </application>
 
 </manifest>
