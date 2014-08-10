@@ -106,7 +106,7 @@ public class LobbyActivity extends Activity {
 		playSoundID(buttonSoundID);
 	    // Do something in response to button
 		//Intent intent = new Intent(this, PlayMenuActivity.class);
-		Intent intent = new Intent(this, PuzzleSelectActivity.class);
+		Intent intent = new Intent(this, PuzzlePackSelectActivity.class);
 		startActivity(intent);
 	}	
 }

@@ -8,14 +8,24 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:gravity="top|center_vertical"
+    android:inputType="textFilter"
     tools:context=".PuzzleActivity" >
+    <TextView
+        android:id="@+id/puzzletitle" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+         />
     <Button
         android:id="@+id/clue1"        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/cluefiller"
-        android:textSize="27sp"        
+        android:textSize="20sp"        
         />	
     <Button
         android:id="@+id/clue2"        
@@ -23,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/cluefiller"
-        android:textSize="27sp"
+        android:textSize="20sp"
         />	
     <Button
         android:id="@+id/clue3"        
@@ -31,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/cluefiller"
-        android:textSize="27sp"
+        android:textSize="20sp"
         />
     <Button
         android:id="@+id/clue4"        
@@ -39,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/cluefiller"
-        android:textSize="27sp"
+        android:textSize="20sp"
         />	
     <Button
         android:id="@+id/clue5"        
@@ -47,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/cluefiller"
-        android:textSize="27sp"
+        android:textSize="20sp"
         />	            
 	<EditText
 	    android:id="@+id/answer"
@@ -58,6 +68,6 @@
 	    android:inputType="textCapWords" 
 	    android:imeOptions="actionSend"
 	    android:onClick="checkAnswer"
-	    android:textSize="27sp"
+	    android:textSize="20sp"
 	    />                        
 </LinearLayout>

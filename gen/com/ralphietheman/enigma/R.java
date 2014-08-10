@@ -9,15 +9,17 @@ package com.ralphietheman.enigma;
 
 public final class R {
     public static final class array {
-        public static final int pref_example_list_titles=0x7f090000;
-        public static final int pref_example_list_values=0x7f090001;
-        public static final int pref_sync_frequency_titles=0x7f090002;
-        public static final int pref_sync_frequency_values=0x7f090003;
+        public static final int difficultyEntries=0x7f060000;
+        public static final int difficultyValues=0x7f060001;
+        public static final int pref_example_list_titles=0x7f060002;
+        public static final int pref_example_list_values=0x7f060003;
+        public static final int pref_sync_frequency_titles=0x7f060004;
+        public static final int pref_sync_frequency_values=0x7f060005;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int mybackground=0x7f060000;
+        public static final int mybackground=0x7f070000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -27,44 +29,54 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
         public static final int greenmenubutton=0x7f020000;
         public static final int ic_launcher=0x7f020001;
-        public static final int maze=0x7f020002;
-        public static final int maze2=0x7f020003;
-        public static final int menubutton=0x7f020004;
+        public static final int icon1=0x7f020002;
+        public static final int icon2=0x7f020003;
+        public static final int icon3=0x7f020004;
+        public static final int icon4=0x7f020005;
+        public static final int icon5=0x7f020006;
+        public static final int icon6=0x7f020007;
+        public static final int icon_artwork=0x7f020008;
+        public static final int maze=0x7f020009;
+        public static final int maze2=0x7f02000a;
+        public static final int menubutton=0x7f02000b;
     }
     public static final class id {
         public static final int aboutbutton=0x7f0c0003;
-        public static final int action_settings=0x7f0c000b;
-        public static final int answer=0x7f0c000a;
-        public static final int clue1=0x7f0c0005;
-        public static final int clue2=0x7f0c0006;
-        public static final int clue3=0x7f0c0007;
-        public static final int clue4=0x7f0c0008;
-        public static final int clue5=0x7f0c0009;
+        public static final int action_settings=0x7f0c000c;
+        public static final int answer=0x7f0c000b;
+        public static final int clue1=0x7f0c0006;
+        public static final int clue2=0x7f0c0007;
+        public static final int clue3=0x7f0c0008;
+        public static final int clue4=0x7f0c0009;
+        public static final int clue5=0x7f0c000a;
         public static final int instructbutton=0x7f0c0002;
         public static final int lobbypic=0x7f0c0000;
         public static final int optionsbutton=0x7f0c0004;
         public static final int playbutton=0x7f0c0001;
+        public static final int puzzletitle=0x7f0c0005;
     }
     public static final class layout {
         public static final int activity_lobby=0x7f030000;
         public static final int activity_play_menu=0x7f030001;
-        public static final int activity_puzzle=0x7f030002;
-        public static final int activity_puzzle_activity=0x7f030003;
-        public static final int activity_puzzle_activity_old=0x7f030004;
-        public static final int activity_puzzle_select=0x7f030005;
+        public static final int activity_play_menu_activity_old=0x7f030002;
+        public static final int activity_puzzle=0x7f030003;
+        public static final int activity_puzzle_activity=0x7f030004;
+        public static final int activity_puzzle_activity_old=0x7f030005;
+        public static final int activity_puzzle_select=0x7f030006;
     }
     public static final class menu {
         public static final int lobby=0x7f0b0000;
         public static final int play_menu=0x7f0b0001;
-        public static final int puzzle=0x7f0b0002;
-        public static final int puzzle_activity_old=0x7f0b0003;
-        public static final int puzzle_select=0x7f0b0004;
+        public static final int play_menu_activity_old=0x7f0b0002;
+        public static final int puzzle=0x7f0b0003;
+        public static final int puzzle_activity_old=0x7f0b0004;
+        public static final int puzzle_select=0x7f0b0005;
     }
     public static final class raw {
         public static final int button=0x7f050000;
@@ -73,53 +85,54 @@ public final class R {
         public static final int win=0x7f050003;
     }
     public static final class string {
-        public static final int about=0x7f080005;
-        public static final int aboutcontent=0x7f080009;
-        public static final int aboutinstructions=0x7f08000b;
-        public static final int action_settings=0x7f080001;
-        public static final int answerhint=0x7f08000f;
-        public static final int app_name=0x7f080000;
-        public static final int cluefiller=0x7f08000e;
-        public static final int desc=0x7f080002;
-        public static final int display_hints=0x7f080017;
-        public static final int gameplay_title=0x7f080014;
-        public static final int hello_world=0x7f080008;
-        public static final int instruct=0x7f080004;
-        public static final int options=0x7f080006;
-        public static final int play=0x7f080003;
-        public static final int pref_default_display_name=0x7f08001e;
-        public static final int pref_description_social_recommendations=0x7f08001c;
+        public static final int about=0x7f090005;
+        public static final int aboutcontent=0x7f090009;
+        public static final int aboutinstructions=0x7f09000b;
+        public static final int action_settings=0x7f090001;
+        public static final int answerhint=0x7f09000f;
+        public static final int app_name=0x7f090000;
+        public static final int cluefiller=0x7f09000e;
+        public static final int desc=0x7f090002;
+        public static final int difficulty_title=0x7f090017;
+        public static final int gameplay_title=0x7f090014;
+        public static final int hello_world=0x7f090008;
+        public static final int instruct=0x7f090004;
+        public static final int options=0x7f090006;
+        public static final int play=0x7f090003;
+        public static final int pref_default_display_name=0x7f09001f;
+        public static final int pref_description_social_recommendations=0x7f09001d;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f080020;
+        public static final int pref_header_data_sync=0x7f090021;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f08001a;
+        public static final int pref_header_general=0x7f09001b;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f080023;
-        public static final int pref_ringtone_silent=0x7f080026;
-        public static final int pref_title_add_friends_to_messages=0x7f08001f;
-        public static final int pref_title_display_name=0x7f08001d;
-        public static final int pref_title_new_message_notifications=0x7f080024;
-        public static final int pref_title_ringtone=0x7f080025;
-        public static final int pref_title_social_recommendations=0x7f08001b;
-        public static final int pref_title_sync_frequency=0x7f080021;
-        public static final int pref_title_system_sync_settings=0x7f080022;
-        public static final int pref_title_vibrate=0x7f080027;
-        public static final int preferences_title=0x7f080016;
-        public static final int settings_title=0x7f080012;
-        public static final int sound_title=0x7f080013;
-        public static final int title_activity_about=0x7f080007;
-        public static final int title_activity_instruction=0x7f08000a;
-        public static final int title_activity_play=0x7f08000c;
-        public static final int title_activity_play_menu=0x7f080010;
-        public static final int title_activity_puzzle=0x7f08000d;
-        public static final int title_activity_puzzle_activity_old=0x7f080011;
-        public static final int title_activity_puzzle_select=0x7f080018;
-        public static final int title_activity_settings=0x7f080019;
-        public static final int welcome_title=0x7f080015;
+        public static final int pref_header_notifications=0x7f090024;
+        public static final int pref_ringtone_silent=0x7f090027;
+        public static final int pref_title_add_friends_to_messages=0x7f090020;
+        public static final int pref_title_display_name=0x7f09001e;
+        public static final int pref_title_new_message_notifications=0x7f090025;
+        public static final int pref_title_ringtone=0x7f090026;
+        public static final int pref_title_social_recommendations=0x7f09001c;
+        public static final int pref_title_sync_frequency=0x7f090022;
+        public static final int pref_title_system_sync_settings=0x7f090023;
+        public static final int pref_title_vibrate=0x7f090028;
+        public static final int preferences_title=0x7f090016;
+        public static final int settings_title=0x7f090012;
+        public static final int sound_title=0x7f090013;
+        public static final int title_activity_about=0x7f090007;
+        public static final int title_activity_instruction=0x7f09000a;
+        public static final int title_activity_play=0x7f09000c;
+        public static final int title_activity_play_menu=0x7f090010;
+        public static final int title_activity_play_menu_activity_old=0x7f090019;
+        public static final int title_activity_puzzle=0x7f09000d;
+        public static final int title_activity_puzzle_activity_old=0x7f090011;
+        public static final int title_activity_puzzle_select=0x7f090018;
+        public static final int title_activity_settings=0x7f09001a;
+        public static final int welcome_title=0x7f090015;
     }
     public static final class style {
         /** 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <puzzlepack>
 	<puzzle>
+	    <number>1</number>
 	    <word>Sliced</word>
 	    <word>Bread</word>
 	    <word>Winner</word>
@@ -8,6 +9,7 @@
 	    <word>Biggest</word>
 	</puzzle>
 	<puzzle>
+	    <number>2</number>
 	    <word>Herring</word>
 	    <word>Red</word>
 	    <word>Rum</word>
@@ -15,6 +17,7 @@
 	    <word>Wizard</word>
 	</puzzle>
 	<puzzle>
+	    <number>3</number>
 	    <word>Dough</word>
 	    <word>Cookie</word>
 	    <word>Monster</word>
@@ -22,6 +25,7 @@
 	    <word>Driver</word>
 	</puzzle>
 	<puzzle>
+	    <number>4</number>
 	    <word>Tea</word>
 	    <word>Bag</word>
 	    <word>Pipe(s)</word>
@@ -29,6 +33,7 @@
 	    <word>Age</word>
 	</puzzle>
 	<puzzle>
+	    <number>5</number>
 	    <word>War</word>
 	    <word>Crime(s)</word>
 	    <word>Wave</word>
@@ -36,6 +41,7 @@
 	    <word>Stroke</word>
 	</puzzle>
 	<puzzle>
+	    <number>6</number>
 	    <word>Head</word>
 	    <word>Phone(s)</word>
 	    <word>Cell</word>
@@ -43,6 +49,7 @@
 	    <word>Brain</word>
 	</puzzle>
 	<puzzle>
+	    <number>7</number>
 	    <word>You</word>
 	    <word>Tube</word>
 	    <word>Top</word>
@@ -50,6 +57,7 @@
 	    <word>Rock</word>
 	</puzzle>
 	<puzzle>
+	    <number>8</number>
 	    <word>Troll</word>
 	    <word>Bridge</word>
 	    <word>Gap</word>
@@ -57,6 +65,7 @@
 	    <word>Sign</word>
 	</puzzle>
 	<puzzle>
+	    <number>9</number>
 	    <word>Water</word>
 	    <word>Gun</word>
 	    <word>Control</word>
@@ -64,24 +73,11 @@
 	    <word>Matter</word>
 	</puzzle>
 	<puzzle>
+	    <number>10</number>
 	    <word>Shooting</word>
 	    <word>Star</word>
 	    <word>Burst</word>
 	    <word>Bubble</word>
 	    <word>Gum</word>
-	</puzzle>
-	<puzzle>
-	    <word>Quiver</word>
-	    <word>Lip</word>
-	    <word>Stick</word>
-	    <word>Figure</word>
-	    <word>Skater</word>
-	</puzzle>
-	<puzzle>
-	    <word>Fries</word>
-	    <word>Burger</word>
-	    <word>King</word>
-	    <word>James</word>
-	    <word>Lebron</word>
 	</puzzle>
 </puzzlepack>

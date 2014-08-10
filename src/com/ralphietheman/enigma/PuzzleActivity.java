@@ -1,32 +1,27 @@
 package com.ralphietheman.enigma;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.TreeSet;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.KeyEvent;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+@SuppressLint("DefaultLocale")
 public class PuzzleActivity extends Activity {
 	
 	private SoundPool soundPool;
@@ -39,24 +34,13 @@ public class PuzzleActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		EditText editText = (EditText) findViewById(R.id.answer);
-		
-		/* Trying ways to clear the textbox when an answer is entered
-		editText.setOnKeyListener(new OnKeyListener(){
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				if(keyCode == KeyEvent.KEYCODE_ENTER){
-					EditText editText = (EditText) findViewById(R.id.answer);
-					editText.setText("");
-				}
-				return true;
-			}
-		});
-		*/
-		
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-		setupResources();
 		setContentView(R.layout.activity_puzzle_activity);
+		
+		setupResources();
+		
+		EditText editText = (EditText) findViewById(R.id.answer);
+		editText.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
 		
 		//Sound resources
 	    // Set the hardware buttons to control the music
@@ -72,8 +56,11 @@ public class PuzzleActivity extends Activity {
 		Bundle b = puzzleinfo.getExtras();
 		words = b.getStringArrayList("puzzle");
 		ends = new ArrayList<String>();
+		setEnds();		
 		answered = new TreeSet<String>();
-		setEnds();
+		
+		TextView title = (TextView) findViewById(R.id.puzzletitle);
+		title.setText("Puzzle " + b.getString("number"));
 	}
 	
 	public void setEnds(){
@@ -127,13 +114,28 @@ public class PuzzleActivity extends Activity {
 		{
 			Button buttonclue = buttonlist.get(index);
 			if(ends.contains(clue)){
-				buttonclue.setText(clue);
+				buttonclue.setText(sanitizeString(clue));
 			}
 			else{
-				buttonclue.setText("?");
+				SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+				String difficulty = preferences.getString("difficulty_preference", "n/a");
+				if(difficulty.equals("Easy")){
+					buttonclue.setText(clue.substring(0, 1).toUpperCase() + clue.substring(1).replaceAll(".", " _ "));
+				}
+				else if(difficulty.equals("Normal")){
+					buttonclue.setText(clue.substring(0, 1).toUpperCase() + "?");
+				}
+				else if(difficulty.equals("Hard")){
+					buttonclue.setText("?");
+				}
 			}
 			index++;
 		}
+	}
+	
+	public String sanitizeString(String s)
+	{
+		return s.substring(0, 1).toUpperCase() + s.substring(1);
 	}
 	
 	@SuppressLint("DefaultLocale")
@@ -147,7 +149,7 @@ public class PuzzleActivity extends Activity {
     		answered.add(answer);
     		Button answeredButton = getButtonByWord(answer);
     		if(answeredButton != null){
-    			answeredButton.setText(answer);
+    			answeredButton.setText(sanitizeString(answer));
     		}
     		playSoundID(winSoundID);
     		if(answered.size() == 3){

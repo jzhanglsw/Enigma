@@ -14,9 +14,12 @@
     <PreferenceCategory 
         android:title="@string/gameplay_title"
         android:key="gameplay_settings">    
-	    <CheckBoxPreference
-	        android:key="display_hints_preference"
-	        android:title="@string/display_hints"
-	        android:defaultValue="true" />
+		<ListPreference
+		    android:key="difficulty_preference"
+		    android:title="@string/difficulty_title"
+		    android:defaultValue="Normal"
+			android:entries="@array/difficultyEntries"		    
+		    android:entryValues="@array/difficultyValues" 
+		    />
     </PreferenceCategory>            
 </PreferenceScreen>

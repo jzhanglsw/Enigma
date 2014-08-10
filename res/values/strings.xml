@@ -24,7 +24,8 @@
     <string name="gameplay_title">Gameplay</string>
     <string name="welcome_title">Play welcome music</string>
     <string name="preferences_title">Enigma Settings</string>
-    <string name="display_hints">Toggle Hints</string>
+    <string name="difficulty_title">Difficulty</string>
     <string name="title_activity_puzzle_select">PuzzleSelectActivity</string>
+    <string name="title_activity_play_menu_activity_old">PlayMenuActivityOld</string>
 
 </resources>
