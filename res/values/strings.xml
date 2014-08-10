@@ -11,14 +11,10 @@
     <string name="title_activity_about">AboutActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="aboutcontent">This is the about page for the enigma app. The creator of this app is Jack Zhang. </string>
-    <string name="title_activity_instruction">InstructionActivity</string>
     <string name="aboutinstructions">How to play Enigma: \n 1. Each puzzle has three clues \n 2. The three clues are all related to one word \n 3. Clues include idioms, adjectives, and sections of the word \n 4. Have fun!</string>
-    <string name="title_activity_play">PlayActivity</string>
-    <string name="title_activity_puzzle">PuzzleActivity</string>
     <string name="cluefiller">Clue</string>
     <string name="answerhint">Answer</string>
-    <string name="title_activity_play_menu">PlayMenuActivity</string>
-    <string name="title_activity_puzzle_activity_old">PuzzleActivityOld</string>
+    
     <string name="settings_title">Settings</string>
     <string name="sound_title">Sound</string>
     <string name="gameplay_title">Gameplay</string>
@@ -27,5 +23,9 @@
     <string name="difficulty_title">Difficulty</string>
     <string name="title_activity_puzzle_select">PuzzleSelectActivity</string>
     <string name="title_activity_play_menu_activity_old">PlayMenuActivityOld</string>
-
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="title_activity_puzzle">PuzzleActivity</string>
+	<string name="title_activity_instruction">InstructionActivity</string>
+	<string name="title_activity_play_menu">PlayMenuActivity</string>
+    <string name="title_activity_puzzle_activity_old">PuzzleActivityOld</string>
 </resources>
